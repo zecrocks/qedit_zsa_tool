@@ -33,6 +33,7 @@ jobs:
     name: Run Container from ECR
     runs-on: ubuntu-latest
     environment: dev
+    if: github.repository == 'QED-it/qedit_zsa_tool'
 
     steps:
       - name: Print initial configuration values

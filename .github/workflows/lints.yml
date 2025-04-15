@@ -9,6 +9,7 @@ jobs:
     name: Rustfmt
     timeout-minutes: 30
     runs-on: ubuntu-latest
+    if: github.repository == 'QED-it/qedit_zsa_tool'
     steps:
       - uses: actions/checkout@v4
       - run: cargo fmt -- --check
@@ -17,6 +18,7 @@ jobs:
     name: Clippy (MSRV)
     timeout-minutes: 30
     runs-on: ubuntu-latest
+    if: github.repository == 'QED-it/qedit_zsa_tool'
     env:
       RUSTFLAGS: '--cfg zcash_unstable="nu6"'
     steps:

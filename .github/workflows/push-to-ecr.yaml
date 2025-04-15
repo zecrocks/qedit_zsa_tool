@@ -11,6 +11,7 @@ jobs:
     name: Push and Deploy
     runs-on: ubuntu-latest
     environment: dev
+    if: github.repository == 'QED-it/qedit_zsa_tool'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

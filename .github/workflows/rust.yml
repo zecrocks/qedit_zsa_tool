@@ -11,8 +11,8 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    if: github.repository == 'QED-it/qedit_zsa_tool'
 
     steps:
     - uses: actions/checkout@v3
